@@ -14,18 +14,43 @@
 		D43B5538296C280500CCB8E9 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D43B5537296C280500CCB8E9 /* Then */; };
 		D43B553B296C282900CCB8E9 /* UIImageColors in Frameworks */ = {isa = PBXBuildFile; productRef = D43B553A296C282900CCB8E9 /* UIImageColors */; };
 		D43B553E296C290C00CCB8E9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D43B553D296C290C00CCB8E9 /* Kingfisher */; };
+		D43B5546296C2C8B00CCB8E9 /* UIImage+KingFisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5541296C2C8B00CCB8E9 /* UIImage+KingFisher.swift */; };
+		D43B5547296C2C8B00CCB8E9 /* UIColor+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5542296C2C8B00CCB8E9 /* UIColor+Constant.swift */; };
+		D43B5548296C2C8B00CCB8E9 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5543296C2C8B00CCB8E9 /* UIView+.swift */; };
+		D43B5549296C2C8B00CCB8E9 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5544296C2C8B00CCB8E9 /* UIViewController+.swift */; };
+		D43B554B296D24A700CCB8E9 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B554A296D24A700CCB8E9 /* UIButton+.swift */; };
+		D43B554E296D253400CCB8E9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D43B554D296D253400CCB8E9 /* RxCocoa */; };
+		D43B5550296D37AD00CCB8E9 /* UIViewController+Rxswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B554F296D37AD00CCB8E9 /* UIViewController+Rxswift.swift */; };
+		D43B5552296D3E3700CCB8E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5551296D3E3700CCB8E9 /* MainViewController.swift */; };
+		D43B5554296D3F9200CCB8E9 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5553296D3F9200CCB8E9 /* MainViewModel.swift */; };
+		D43B5556296D400100CCB8E9 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5555296D400100CCB8E9 /* TabViewController.swift */; };
+		D43B5559296D475100CCB8E9 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5558296D475100CCB8E9 /* TabBarItem.swift */; };
+		D43B555B296D48A800CCB8E9 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B555A296D48A800CCB8E9 /* CustomTabBar.swift */; };
+		D43B5560296D680500CCB8E9 /* GridColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B555F296D680500CCB8E9 /* GridColor.swift */; };
 		D4CE8A60296C21B200A5956F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE8A5F296C21B200A5956F /* AppDelegate.swift */; };
 		D4CE8A62296C21B200A5956F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE8A61296C21B200A5956F /* SceneDelegate.swift */; };
-		D4CE8A64296C21B200A5956F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE8A63296C21B200A5956F /* ViewController.swift */; };
+		D4CE8A64296C21B200A5956F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE8A63296C21B200A5956F /* LoginViewController.swift */; };
 		D4CE8A69296C21B300A5956F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4CE8A68296C21B300A5956F /* Assets.xcassets */; };
 		D4CE8A6C296C21B300A5956F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4CE8A6A296C21B300A5956F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D43B5541296C2C8B00CCB8E9 /* UIImage+KingFisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+KingFisher.swift"; path = "../../../../TeamMyung/TeamMyung/TeamMyung/Global/Extension/UIImage+KingFisher.swift"; sourceTree = "<group>"; };
+		D43B5542296C2C8B00CCB8E9 /* UIColor+Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Constant.swift"; path = "../../../../TeamMyung/TeamMyung/TeamMyung/Global/Extension/UIColor+Constant.swift"; sourceTree = "<group>"; };
+		D43B5543296C2C8B00CCB8E9 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+.swift"; path = "../../../../TeamMyung/TeamMyung/TeamMyung/Global/Extension/UIView+.swift"; sourceTree = "<group>"; };
+		D43B5544296C2C8B00CCB8E9 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+.swift"; path = "../../../../TeamMyung/TeamMyung/TeamMyung/Global/Extension/UIViewController+.swift"; sourceTree = "<group>"; };
+		D43B554A296D24A700CCB8E9 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		D43B554F296D37AD00CCB8E9 /* UIViewController+Rxswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rxswift.swift"; sourceTree = "<group>"; };
+		D43B5551296D3E3700CCB8E9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D43B5553296D3F9200CCB8E9 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		D43B5555296D400100CCB8E9 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		D43B5558296D475100CCB8E9 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		D43B555A296D48A800CCB8E9 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		D43B555F296D680500CCB8E9 /* GridColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridColor.swift; sourceTree = "<group>"; };
 		D4CE8A5C296C21B200A5956F /* Puzzloging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puzzloging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CE8A5F296C21B200A5956F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4CE8A61296C21B200A5956F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D4CE8A63296C21B200A5956F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4CE8A63296C21B200A5956F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D4CE8A68296C21B300A5956F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4CE8A6B296C21B300A5956F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4CE8A6D296C21B300A5956F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +67,7 @@
 				D43B5532296C27C600CCB8E9 /* SnapKit in Frameworks */,
 				D43B552F296C27AC00CCB8E9 /* RxMoya in Frameworks */,
 				D43B552D296C27AC00CCB8E9 /* Moya in Frameworks */,
+				D43B554E296D253400CCB8E9 /* RxCocoa in Frameworks */,
 				D43B5535296C27F400CCB8E9 /* ColorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +75,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D43B553F296C2BD800CCB8E9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D4CE8A68296C21B300A5956F /* Assets.xcassets */,
+				D4CE8A6A296C21B300A5956F /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D43B5557296D474300CCB8E9 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D43B5558296D475100CCB8E9 /* TabBarItem.swift */,
+				D43B555A296D48A800CCB8E9 /* CustomTabBar.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		D43B555C296D668600CCB8E9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D4CE8A63296C21B200A5956F /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D43B555D296D668E00CCB8E9 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				D43B5555296D400100CCB8E9 /* TabViewController.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		D43B555E296D669500CCB8E9 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				D43B5551296D3E3700CCB8E9 /* MainViewController.swift */,
+				D43B5553296D3F9200CCB8E9 /* MainViewModel.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
 		D4CE8A53296C21B200A5956F = {
 			isa = PBXGroup;
 			children = (
@@ -68,12 +137,10 @@
 		D4CE8A5E296C21B200A5956F /* Puzzloging */ = {
 			isa = PBXGroup;
 			children = (
+				D43B553F296C2BD800CCB8E9 /* Resource */,
 				D4CE8A75296C221400A5956F /* Support */,
 				D4CE8A74296C220E00A5956F /* Scene */,
 				D4CE8A73296C220300A5956F /* Extension */,
-				D4CE8A63296C21B200A5956F /* ViewController.swift */,
-				D4CE8A68296C21B300A5956F /* Assets.xcassets */,
-				D4CE8A6A296C21B300A5956F /* LaunchScreen.storyboard */,
 				D4CE8A6D296C21B300A5956F /* Info.plist */,
 			);
 			path = Puzzloging;
@@ -82,6 +149,12 @@
 		D4CE8A73296C220300A5956F /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D43B5542296C2C8B00CCB8E9 /* UIColor+Constant.swift */,
+				D43B5541296C2C8B00CCB8E9 /* UIImage+KingFisher.swift */,
+				D43B5543296C2C8B00CCB8E9 /* UIView+.swift */,
+				D43B5544296C2C8B00CCB8E9 /* UIViewController+.swift */,
+				D43B554A296D24A700CCB8E9 /* UIButton+.swift */,
+				D43B554F296D37AD00CCB8E9 /* UIViewController+Rxswift.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -89,6 +162,10 @@
 		D4CE8A74296C220E00A5956F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				D43B5557296D474300CCB8E9 /* CustomTabBar */,
+				D43B555C296D668600CCB8E9 /* Login */,
+				D43B555E296D669500CCB8E9 /* Collection */,
+				D43B555D296D668E00CCB8E9 /* Tab */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -98,6 +175,7 @@
 			children = (
 				D4CE8A5F296C21B200A5956F /* AppDelegate.swift */,
 				D4CE8A61296C21B200A5956F /* SceneDelegate.swift */,
+				D43B555F296D680500CCB8E9 /* GridColor.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -126,6 +204,7 @@
 				D43B5537296C280500CCB8E9 /* Then */,
 				D43B553A296C282900CCB8E9 /* UIImageColors */,
 				D43B553D296C290C00CCB8E9 /* Kingfisher */,
+				D43B554D296D253400CCB8E9 /* RxCocoa */,
 			);
 			productName = Puzzloging;
 			productReference = D4CE8A5C296C21B200A5956F /* Puzzloging.app */;
@@ -162,6 +241,7 @@
 				D43B5536296C280500CCB8E9 /* XCRemoteSwiftPackageReference "Then" */,
 				D43B5539296C282900CCB8E9 /* XCRemoteSwiftPackageReference "UIImageColors" */,
 				D43B553C296C290C00CCB8E9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				D43B554C296D253400CCB8E9 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = D4CE8A5D296C21B200A5956F /* Products */;
 			projectDirPath = "";
@@ -189,9 +269,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4CE8A64296C21B200A5956F /* ViewController.swift in Sources */,
+				D43B5556296D400100CCB8E9 /* TabViewController.swift in Sources */,
+				D43B5546296C2C8B00CCB8E9 /* UIImage+KingFisher.swift in Sources */,
+				D43B5560296D680500CCB8E9 /* GridColor.swift in Sources */,
+				D43B555B296D48A800CCB8E9 /* CustomTabBar.swift in Sources */,
+				D43B5550296D37AD00CCB8E9 /* UIViewController+Rxswift.swift in Sources */,
+				D43B5547296C2C8B00CCB8E9 /* UIColor+Constant.swift in Sources */,
+				D43B5549296C2C8B00CCB8E9 /* UIViewController+.swift in Sources */,
+				D43B5548296C2C8B00CCB8E9 /* UIView+.swift in Sources */,
+				D4CE8A64296C21B200A5956F /* LoginViewController.swift in Sources */,
 				D4CE8A60296C21B200A5956F /* AppDelegate.swift in Sources */,
 				D4CE8A62296C21B200A5956F /* SceneDelegate.swift in Sources */,
+				D43B5559296D475100CCB8E9 /* TabBarItem.swift in Sources */,
+				D43B554B296D24A700CCB8E9 /* UIButton+.swift in Sources */,
+				D43B5552296D3E3700CCB8E9 /* MainViewController.swift in Sources */,
+				D43B5554296D3F9200CCB8E9 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +427,6 @@
 				INFOPLIST_FILE = Puzzloging/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,7 +454,6 @@
 				INFOPLIST_FILE = Puzzloging/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,6 +541,14 @@
 				kind = branch;
 			};
 		};
+		D43B554C296D253400CCB8E9 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -488,6 +586,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D43B553C296C290C00CCB8E9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		D43B554D296D253400CCB8E9 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D43B554C296D253400CCB8E9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
