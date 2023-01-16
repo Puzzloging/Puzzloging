@@ -6,28 +6,35 @@
 //
 
 import UIKit
+import RxSwift
 
 enum GridColor: String, CaseIterable {
     
-    case black = "Black"
-    case red = "Red"
-    case white = "White"
-    case lime = "Lime"
-    case green = "Green"
-    case yellow = "Yellow"
-    case blue = "Blue"
-    case aqua = "Aqua"
-    case purple = "Purple"
-    case brown = "Brown"
-    case gray = "Gray"
-    case pink = "Pink"
-    case orange = "Orange"
-    case navy = "Navy"
-    case apricot = "Apricot"
+    case add = "New Picture"
+    case mosaic = "Mosaic Picture"
+    case black = "black"
+    case red = "red"
+    case white = "white"
+    case lime = "lime"
+    case green = "green"
+    case yellow = "yellow"
+    case blue = "blue"
+    case aqua = "aqua"
+    case purple = "purple"
+    case brown = "brown"
+    case gray = "gray"
+    case pink = "pink"
+    case orange = "orange"
+    case navy = "navy"
+    case apricot = "apricot"
     
     var color: UIColor {
         
         switch self {
+        case .add :
+            return .lightGray
+        case .mosaic:
+            return .lightGray
         case .black:
             return UIColor(red: 0 / 255, green: 0 / 255, blue: 0 / 255, alpha: 1)
         case .red:
@@ -59,5 +66,144 @@ enum GridColor: String, CaseIterable {
         case .apricot:
             return UIColor(red: 251 / 255, green: 206 / 255, blue: 177 / 255, alpha: 1)
         }
+    }
+    
+    var koreaColorName: String {
+        switch self {
+        case .add:
+            return "없음"
+        case .mosaic:
+            return "없음"
+        case .black:
+            return "검정색"
+        case .red:
+            return "빨간색"
+        case .white:
+            return "흰색"
+        case .lime:
+            return "연두색"
+        case .green:
+            return "초록색"
+        case .yellow:
+            return "노란색"
+        case .blue:
+            return "파란색"
+        case .aqua:
+            return "하늘색"
+        case .purple:
+            return "보라색"
+        case .brown:
+            return "갈색"
+        case .gray:
+            return "회색"
+        case .pink:
+            return "분홍색"
+        case .orange:
+            return "주황색"
+        case .navy:
+            return "남색"
+        case .apricot:
+            return "살색"
+        }
+    }
+    
+    static func measureSimilarity(color: UIColor) -> GridColor {
+        let components = color.cgColor.components
+        var colorDiffValue: CGFloat = 200000.0
+        var mostSimilarityColor: GridColor  = .black
+        
+        GridColor.allCases.forEach { compareColor in
+          
+            let diffValue = color.difference(from: compareColor.color, using: .CIE94)
+            
+            switch diffValue {
+            case .indentical(let diffValue):
+                if colorDiffValue > diffValue {
+                    colorDiffValue = diffValue
+                    mostSimilarityColor = compareColor
+                }
+            case .similar(let diffValue):
+                if colorDiffValue > diffValue {
+                    colorDiffValue = diffValue
+                    mostSimilarityColor = compareColor
+                }
+            case .close(let diffValue):
+                if colorDiffValue > diffValue {
+                    colorDiffValue = diffValue
+                    mostSimilarityColor = compareColor
+                }
+            case .near(let diffValue):
+                if colorDiffValue > diffValue {
+                    colorDiffValue = diffValue
+                    mostSimilarityColor = compareColor
+                }
+            case .different(let diffValue):
+                if colorDiffValue > diffValue {
+                    colorDiffValue = diffValue
+                    mostSimilarityColor = compareColor
+                }
+            case .far(let diffValue):
+                if colorDiffValue > diffValue {
+                    colorDiffValue = diffValue
+                    mostSimilarityColor = compareColor
+                }
+            }
+        }
+        return mostSimilarityColor
+    }
+    
+    static func measureSimilarity(colors: [UIColor]) -> Observable<[GridColor]> {
+       
+        var gridColors = [GridColor]()
+     
+        for color in colors {
+            let components = color.cgColor.components
+            var colorDiffValue: CGFloat = 200000.0
+            var mostSimilarityColor: GridColor  = .black
+            
+            GridColor.allCases.forEach { compareColor in
+              
+                let diffValue = color.difference(from: compareColor.color, using: .CIE94)
+                
+                switch diffValue {
+                case .indentical(let diffValue):
+                    if colorDiffValue > diffValue {
+                        colorDiffValue = diffValue
+                        mostSimilarityColor = compareColor
+                    }
+                case .similar(let diffValue):
+                    if colorDiffValue > diffValue {
+                        colorDiffValue = diffValue
+                        mostSimilarityColor = compareColor
+                    }
+                case .close(let diffValue):
+                    if colorDiffValue > diffValue {
+                        colorDiffValue = diffValue
+                        mostSimilarityColor = compareColor
+                    }
+                case .near(let diffValue):
+                    if colorDiffValue > diffValue {
+                        colorDiffValue = diffValue
+                        mostSimilarityColor = compareColor
+                    }
+                case .different(let diffValue):
+                    if colorDiffValue > diffValue {
+                        colorDiffValue = diffValue
+                        mostSimilarityColor = compareColor
+                    }
+                case .far(let diffValue):
+                    if colorDiffValue > diffValue {
+                        colorDiffValue = diffValue
+                        mostSimilarityColor = compareColor
+                    }
+                }
+                
+            }
+            mostSimilarityColor = mostSimilarityColor == .add ? .gray : mostSimilarityColor
+            mostSimilarityColor = mostSimilarityColor == .mosaic ? .gray : mostSimilarityColor
+            
+            gridColors.append(mostSimilarityColor)
+        }
+        return Observable.just(gridColors.uniqued())
     }
 }

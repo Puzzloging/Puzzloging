@@ -18,15 +18,25 @@
 		D43B5547296C2C8B00CCB8E9 /* UIColor+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5542296C2C8B00CCB8E9 /* UIColor+Constant.swift */; };
 		D43B5548296C2C8B00CCB8E9 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5543296C2C8B00CCB8E9 /* UIView+.swift */; };
 		D43B5549296C2C8B00CCB8E9 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5544296C2C8B00CCB8E9 /* UIViewController+.swift */; };
-		D43B554B296D24A700CCB8E9 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B554A296D24A700CCB8E9 /* UIButton+.swift */; };
 		D43B554E296D253400CCB8E9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D43B554D296D253400CCB8E9 /* RxCocoa */; };
 		D43B5550296D37AD00CCB8E9 /* UIViewController+Rxswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B554F296D37AD00CCB8E9 /* UIViewController+Rxswift.swift */; };
 		D43B5552296D3E3700CCB8E9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5551296D3E3700CCB8E9 /* MainViewController.swift */; };
 		D43B5554296D3F9200CCB8E9 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5553296D3F9200CCB8E9 /* MainViewModel.swift */; };
 		D43B5556296D400100CCB8E9 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5555296D400100CCB8E9 /* TabViewController.swift */; };
-		D43B5559296D475100CCB8E9 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5558296D475100CCB8E9 /* TabBarItem.swift */; };
-		D43B555B296D48A800CCB8E9 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B555A296D48A800CCB8E9 /* CustomTabBar.swift */; };
 		D43B5560296D680500CCB8E9 /* GridColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B555F296D680500CCB8E9 /* GridColor.swift */; };
+		D43B5562296FFC9100CCB8E9 /* MainViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B5561296FFC9100CCB8E9 /* MainViewCollectionViewCell.swift */; };
+		D43B556629701DE200CCB8E9 /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B556529701DE200CCB8E9 /* ImageCollectionViewController.swift */; };
+		D43B556829714C2200CCB8E9 /* ImageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B556729714C2200CCB8E9 /* ImageCollectionView.swift */; };
+		D43B556B2971566B00CCB8E9 /* MakeMosaicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B556A2971566B00CCB8E9 /* MakeMosaicViewController.swift */; };
+		D43B556E2971589600CCB8E9 /* MakeMosaicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B556D2971589600CCB8E9 /* MakeMosaicTableViewCell.swift */; };
+		D43B55702971617400CCB8E9 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B556F2971617400CCB8E9 /* UIImage+.swift */; };
+		D43B55722971767300CCB8E9 /* MakeMosaicTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B55712971767300CCB8E9 /* MakeMosaicTableHeaderView.swift */; };
+		D43B55772972A2EB00CCB8E9 /* RxSwift+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B55762972A2EB00CCB8E9 /* RxSwift+.swift */; };
+		D43B55792972C38C00CCB8E9 /* MakeMosaicTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B55782972C38C00CCB8E9 /* MakeMosaicTableFooterView.swift */; };
+		D43B557C2973F57300CCB8E9 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B557B2973F57300CCB8E9 /* APIConstants.swift */; };
+		D43B557E2973F6E100CCB8E9 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B557D2973F6E100CCB8E9 /* Entities.swift */; };
+		D43B55802973F98700CCB8E9 /* TotalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B557F2973F98700CCB8E9 /* TotalAPI.swift */; };
+		D43B55822974083F00CCB8E9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B55812974083F00CCB8E9 /* Network.swift */; };
 		D4CE8A60296C21B200A5956F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE8A5F296C21B200A5956F /* AppDelegate.swift */; };
 		D4CE8A62296C21B200A5956F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE8A61296C21B200A5956F /* SceneDelegate.swift */; };
 		D4CE8A64296C21B200A5956F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE8A63296C21B200A5956F /* LoginViewController.swift */; };
@@ -39,14 +49,24 @@
 		D43B5542296C2C8B00CCB8E9 /* UIColor+Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Constant.swift"; path = "../../../../TeamMyung/TeamMyung/TeamMyung/Global/Extension/UIColor+Constant.swift"; sourceTree = "<group>"; };
 		D43B5543296C2C8B00CCB8E9 /* UIView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+.swift"; path = "../../../../TeamMyung/TeamMyung/TeamMyung/Global/Extension/UIView+.swift"; sourceTree = "<group>"; };
 		D43B5544296C2C8B00CCB8E9 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+.swift"; path = "../../../../TeamMyung/TeamMyung/TeamMyung/Global/Extension/UIViewController+.swift"; sourceTree = "<group>"; };
-		D43B554A296D24A700CCB8E9 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		D43B554F296D37AD00CCB8E9 /* UIViewController+Rxswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rxswift.swift"; sourceTree = "<group>"; };
 		D43B5551296D3E3700CCB8E9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D43B5553296D3F9200CCB8E9 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		D43B5555296D400100CCB8E9 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
-		D43B5558296D475100CCB8E9 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
-		D43B555A296D48A800CCB8E9 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		D43B555F296D680500CCB8E9 /* GridColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridColor.swift; sourceTree = "<group>"; };
+		D43B5561296FFC9100CCB8E9 /* MainViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		D43B556529701DE200CCB8E9 /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
+		D43B556729714C2200CCB8E9 /* ImageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionView.swift; sourceTree = "<group>"; };
+		D43B556A2971566B00CCB8E9 /* MakeMosaicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeMosaicViewController.swift; sourceTree = "<group>"; };
+		D43B556D2971589600CCB8E9 /* MakeMosaicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeMosaicTableViewCell.swift; sourceTree = "<group>"; };
+		D43B556F2971617400CCB8E9 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		D43B55712971767300CCB8E9 /* MakeMosaicTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeMosaicTableHeaderView.swift; sourceTree = "<group>"; };
+		D43B55762972A2EB00CCB8E9 /* RxSwift+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+.swift"; sourceTree = "<group>"; };
+		D43B55782972C38C00CCB8E9 /* MakeMosaicTableFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeMosaicTableFooterView.swift; sourceTree = "<group>"; };
+		D43B557B2973F57300CCB8E9 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		D43B557D2973F6E100CCB8E9 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
+		D43B557F2973F98700CCB8E9 /* TotalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAPI.swift; sourceTree = "<group>"; };
+		D43B55812974083F00CCB8E9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		D4CE8A5C296C21B200A5956F /* Puzzloging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puzzloging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CE8A5F296C21B200A5956F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4CE8A61296C21B200A5956F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,15 +104,6 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		D43B5557296D474300CCB8E9 /* CustomTabBar */ = {
-			isa = PBXGroup;
-			children = (
-				D43B5558296D475100CCB8E9 /* TabBarItem.swift */,
-				D43B555A296D48A800CCB8E9 /* CustomTabBar.swift */,
-			);
-			path = CustomTabBar;
-			sourceTree = "<group>";
-		};
 		D43B555C296D668600CCB8E9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,10 +123,58 @@
 		D43B555E296D669500CCB8E9 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				D43B5551296D3E3700CCB8E9 /* MainViewController.swift */,
-				D43B5553296D3F9200CCB8E9 /* MainViewModel.swift */,
+				D43B5569297152E300CCB8E9 /* Camera */,
+				D43B556329701DC300CCB8E9 /* GridCollection */,
 			);
 			path = Collection;
+			sourceTree = "<group>";
+		};
+		D43B556329701DC300CCB8E9 /* GridCollection */ = {
+			isa = PBXGroup;
+			children = (
+				D43B556429701DCF00CCB8E9 /* ImageCollection */,
+				D43B5551296D3E3700CCB8E9 /* MainViewController.swift */,
+				D43B5561296FFC9100CCB8E9 /* MainViewCollectionViewCell.swift */,
+			);
+			path = GridCollection;
+			sourceTree = "<group>";
+		};
+		D43B556429701DCF00CCB8E9 /* ImageCollection */ = {
+			isa = PBXGroup;
+			children = (
+				D43B556529701DE200CCB8E9 /* ImageCollectionViewController.swift */,
+				D43B556729714C2200CCB8E9 /* ImageCollectionView.swift */,
+			);
+			path = ImageCollection;
+			sourceTree = "<group>";
+		};
+		D43B5569297152E300CCB8E9 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		D43B556C2971584000CCB8E9 /* MakeMosaicViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D43B556A2971566B00CCB8E9 /* MakeMosaicViewController.swift */,
+				D43B556D2971589600CCB8E9 /* MakeMosaicTableViewCell.swift */,
+				D43B55712971767300CCB8E9 /* MakeMosaicTableHeaderView.swift */,
+				D43B55782972C38C00CCB8E9 /* MakeMosaicTableFooterView.swift */,
+			);
+			path = MakeMosaicViewController;
+			sourceTree = "<group>";
+		};
+		D43B557A2973F56500CCB8E9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D43B557B2973F57300CCB8E9 /* APIConstants.swift */,
+				D43B557D2973F6E100CCB8E9 /* Entities.swift */,
+				D43B557F2973F98700CCB8E9 /* TotalAPI.swift */,
+				D43B55812974083F00CCB8E9 /* Network.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		D4CE8A53296C21B200A5956F = {
@@ -137,9 +196,10 @@
 		D4CE8A5E296C21B200A5956F /* Puzzloging */ = {
 			isa = PBXGroup;
 			children = (
+				D43B557A2973F56500CCB8E9 /* Network */,
+				D4CE8A74296C220E00A5956F /* Scene */,
 				D43B553F296C2BD800CCB8E9 /* Resource */,
 				D4CE8A75296C221400A5956F /* Support */,
-				D4CE8A74296C220E00A5956F /* Scene */,
 				D4CE8A73296C220300A5956F /* Extension */,
 				D4CE8A6D296C21B300A5956F /* Info.plist */,
 			);
@@ -153,8 +213,9 @@
 				D43B5541296C2C8B00CCB8E9 /* UIImage+KingFisher.swift */,
 				D43B5543296C2C8B00CCB8E9 /* UIView+.swift */,
 				D43B5544296C2C8B00CCB8E9 /* UIViewController+.swift */,
-				D43B554A296D24A700CCB8E9 /* UIButton+.swift */,
 				D43B554F296D37AD00CCB8E9 /* UIViewController+Rxswift.swift */,
+				D43B556F2971617400CCB8E9 /* UIImage+.swift */,
+				D43B55762972A2EB00CCB8E9 /* RxSwift+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -162,10 +223,11 @@
 		D4CE8A74296C220E00A5956F /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				D43B5557296D474300CCB8E9 /* CustomTabBar */,
+				D43B5553296D3F9200CCB8E9 /* MainViewModel.swift */,
 				D43B555C296D668600CCB8E9 /* Login */,
 				D43B555E296D669500CCB8E9 /* Collection */,
 				D43B555D296D668E00CCB8E9 /* Tab */,
+				D43B556C2971584000CCB8E9 /* MakeMosaicViewController */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -271,19 +333,29 @@
 			files = (
 				D43B5556296D400100CCB8E9 /* TabViewController.swift in Sources */,
 				D43B5546296C2C8B00CCB8E9 /* UIImage+KingFisher.swift in Sources */,
+				D43B55722971767300CCB8E9 /* MakeMosaicTableHeaderView.swift in Sources */,
+				D43B55822974083F00CCB8E9 /* Network.swift in Sources */,
 				D43B5560296D680500CCB8E9 /* GridColor.swift in Sources */,
-				D43B555B296D48A800CCB8E9 /* CustomTabBar.swift in Sources */,
+				D43B5562296FFC9100CCB8E9 /* MainViewCollectionViewCell.swift in Sources */,
 				D43B5550296D37AD00CCB8E9 /* UIViewController+Rxswift.swift in Sources */,
 				D43B5547296C2C8B00CCB8E9 /* UIColor+Constant.swift in Sources */,
+				D43B55792972C38C00CCB8E9 /* MakeMosaicTableFooterView.swift in Sources */,
+				D43B556B2971566B00CCB8E9 /* MakeMosaicViewController.swift in Sources */,
+				D43B557C2973F57300CCB8E9 /* APIConstants.swift in Sources */,
 				D43B5549296C2C8B00CCB8E9 /* UIViewController+.swift in Sources */,
 				D43B5548296C2C8B00CCB8E9 /* UIView+.swift in Sources */,
 				D4CE8A64296C21B200A5956F /* LoginViewController.swift in Sources */,
+				D43B556829714C2200CCB8E9 /* ImageCollectionView.swift in Sources */,
 				D4CE8A60296C21B200A5956F /* AppDelegate.swift in Sources */,
 				D4CE8A62296C21B200A5956F /* SceneDelegate.swift in Sources */,
-				D43B5559296D475100CCB8E9 /* TabBarItem.swift in Sources */,
-				D43B554B296D24A700CCB8E9 /* UIButton+.swift in Sources */,
+				D43B557E2973F6E100CCB8E9 /* Entities.swift in Sources */,
+				D43B55802973F98700CCB8E9 /* TotalAPI.swift in Sources */,
+				D43B556E2971589600CCB8E9 /* MakeMosaicTableViewCell.swift in Sources */,
+				D43B556629701DE200CCB8E9 /* ImageCollectionViewController.swift in Sources */,
 				D43B5552296D3E3700CCB8E9 /* MainViewController.swift in Sources */,
+				D43B55772972A2EB00CCB8E9 /* RxSwift+.swift in Sources */,
 				D43B5554296D3F9200CCB8E9 /* MainViewModel.swift in Sources */,
+				D43B55702971617400CCB8E9 /* UIImage+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
