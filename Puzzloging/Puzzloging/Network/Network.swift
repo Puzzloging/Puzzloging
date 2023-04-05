@@ -19,8 +19,10 @@ struct Network {
     func connect(type param: TotalAPI) -> Single<Codable> {
         return provider.rx
             .request(param)
+            .debug()
             .filterSuccessfulStatusCodes()
             .map { response in
+                print(String(data: response.data,encoding: .utf8))
                 return try! response.map(TotalAPI.returnType(of: param))
             }
     }

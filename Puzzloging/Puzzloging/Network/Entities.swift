@@ -20,19 +20,18 @@ struct CommonResWithArray<T: Codable>: Codable {
 }
 
 struct LoginInfo: Codable {
-    let id: String
+    let id: Int
     let name: String
 }
 
 struct Image: Codable {
-    let imageID: Int
+    let imageId: Int
     let imagePath: String
     let color: String
+}
 
-    enum CodingKeys: String, CodingKey {
-        case imageID
-        case imagePath, color
-    }
+struct MosaicImage: Codable {
+    let imagePath: String
 }
 
 class JSONNull: Codable, Hashable {

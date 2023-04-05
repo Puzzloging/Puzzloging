@@ -1,11 +1,17 @@
-////
-////  RxSwift+.swift
-////  Puzzloging
-////
-////  Created by changgyo seo on 2023/01/14.
-////
 //
-//import RxSwift
-//import RxCocoa
+//  RxSwift+.swift
+//  Puzzloging
 //
-//extension Reactive where Base: SomeType { } 
+//  Created by changgyo seo on 2023/01/14.
+//
+
+import UIKit
+import RxSwift
+import RxCocoa
+
+extension RxSwift.Reactive where Base: UIViewController {
+    public var viewWillAppear: Observable<Bool> {
+    return methodInvoked(#selector(UIViewController.viewWillAppear))
+       .map { $0.first as? Bool ?? false }
+  }
+}

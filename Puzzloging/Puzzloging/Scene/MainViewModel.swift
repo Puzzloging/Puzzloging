@@ -19,60 +19,76 @@ class MainViewModel {
     var output: Output
     
     
-    init(dependency: String){//, loadingAction: @escaping (Bool) -> Void) {
+    init(dependency: String) {
         self.dependency = dependency
         
         input = Input(loadingEndAction: nil,
-                      userLogin: BehaviorSubject<LoginInfo>(value: LoginInfo(id: "bbj", name: "bbj")),
-                      mosaicImage: PublishSubject<UIImage>(),
+                      userLogin: BehaviorSubject<LoginInfo>(value: LoginInfo(id: 1, name: "s")),
+                      willMosaicImage: PublishSubject<UIImage>(),
                       tapGridColor: PublishSubject<GridColor>(),
                       addImage: PublishSubject<UIImage>(),
-                      makeMosaicImage: PublishSubject<Void>())
+                      makeMosaicImage: BehaviorSubject<Bool>(value: false))
         
-        output = Output(colletedColors: BehaviorSubject<[GridColor]>(value: [GridColor]()),
+        output = Output(mosaicedImages: BehaviorSubject<[MosaicImage]>(value: [MosaicImage]()),
+                        colletedColors: BehaviorSubject<[GridColor]>(value: [GridColor]()),
                         colorIngredients: BehaviorSubject<[GridColor]>(value: [GridColor]()),
                         myImageCollection: BehaviorSubject<[Image]>(value: [Image]()),
                         imageForGridColor: BehaviorSubject<[Image]>(value: [Image]()))
         
         input.userLogin
-            .filter { $0.id != "bbj" }
+            .filter { "\($0.id)" != "bbj" }
             .subscribe { loginInfo in
                 guard let name = loginInfo.element?.name else { return }
                 Network.shared.connect(type: .login(name))
                     .subscribe { response in
                         switch response {
                         case .success(let data):
+                            //print(String(data: data as! Data, encoding: .utf8))
                             guard let myId = data as? CommonRes<LoginInfo> else { return }
-                            User.myId = myId.data.id
+                            User.myId = "\(myId.data.id)"
+                            
+                            Network.shared.connect(type: .getPhoto)
+                                .subscribe { response in
+                                    switch response {
+                                    case .success(let data):
+                                        guard let myPhotos = data as? CommonResWithArray<Image> else { return }
+                                        self.output.myImageCollection.onNext(myPhotos.data)
+                                    case .failure(let error):
+                                        print(error.localizedDescription)
+                                    }
+                                }
+                                .disposed(by: self.disposeBag)
+                            
+                            Network.shared.connect(type: .getMosaicImage)
+                                .subscribe { response in
+                                    switch response {
+                                    case .success(let data):
+                                        guard let myPhots = data as? CommonResWithArray<MosaicImage> else { return }
+                                        self.output.mosaicedImages.onNext(myPhots.data)
+                                    case .failure(let error):
+                                        print(error.localizedDescription)
+                                    }
+                                }
+                                .disposed(by: self.disposeBag)
+                            
                         case .failure(let error):
                             print(error.localizedDescription)
                         }
                     }
                     .disposed(by: self.disposeBag)
-                
-                Network.shared.connect(type: .getPhoto)
-                    .subscribe { response in
-                        switch response {
-                        case .success(let data):
-                            guard let myPhotos = data as? CommonResWithArray<Image> else { return }
-                            self.output.myImageCollection.onNext(myPhotos.data)
-                        case .failure(let error):
-                            print(error.localizedDescription)
-                        }
-                    }
-                    .disposed(by: self.disposeBag)
-                
             }
             .disposed(by: disposeBag)
         
         input.addImage
             .subscribe { image in
                 let color = GridColor.measureSimilarity(color: image.getColors()!.background)
-
+                print(color)
                 Network.shared.connect(type: .imageUpload(color, image))
                     .subscribe { response in
                         switch response {
                         case .success(_):
+                            print("scucce")
+                            print("-----------------")
                             Network.shared.connect(type: .getPhoto)
                                 .subscribe { response in
                                     switch response {
@@ -104,7 +120,7 @@ class MainViewModel {
             }
             .disposed(by: disposeBag)
         
-        input.mosaicImage
+        input.willMosaicImage
             .observe(on: ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global()))
             .flatMapLatest { image  in
                 let colorList = image.SplitGrid(times: 10)
@@ -117,14 +133,18 @@ class MainViewModel {
             .disposed(by: disposeBag)
         
         input.makeMosaicImage
-            .flatMap { _ in Observable.combineLatest(self.output.colorIngredients, self.input.mosaicImage) }
+            .filter { $0 == true }
+            .flatMap { _ in Observable.combineLatest(self.output.colorIngredients, self.input.willMosaicImage) }
+            .debug()
             .subscribe { colors, image in
                 Network.shared.connect(type: .generateMosaic(colors, image))
                     .subscribe { response in
                         switch response {
                         case .success(let data):
-                            guard let myPhotos = data as? CommonResWithArray<Image> else { return }
-                            self.output.myImageCollection.onNext(myPhotos.data)
+                            guard let myPhotos = data as? CommonRes<MosaicImage> else { return }
+                            print(myPhotos.data)
+                            self.input.loadingEndAction
+                            //self.output.mosaicedImages.onNext(myPhotos.data)
                         case .failure(let error):
                             print(error.localizedDescription)
                         }
@@ -155,13 +175,14 @@ extension MainViewModel {
     struct Input {
         var loadingEndAction: (()->Void)?
         var userLogin: BehaviorSubject<LoginInfo>
-        var mosaicImage: PublishSubject<UIImage>
+        var willMosaicImage: PublishSubject<UIImage>
         var tapGridColor: PublishSubject<GridColor>
         var addImage: PublishSubject<UIImage>
-        var makeMosaicImage: PublishSubject<Void>
+        var makeMosaicImage: BehaviorSubject<Bool>
     }
     
     struct Output {
+        var mosaicedImages: BehaviorSubject<[MosaicImage]>
         var colletedColors: BehaviorSubject<[GridColor]>
         var colorIngredients: BehaviorSubject<[GridColor]>
         var myImageCollection: BehaviorSubject<[Image]>

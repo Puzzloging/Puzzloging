@@ -131,7 +131,7 @@ extension MakeMosaicViewController: UITableViewDelegate,
             viewModel.input.loadingEndAction = { [weak self] in
                 self?.progressStop()
             }
-            viewModel.input.mosaicImage.onNext(image)
+            viewModel.input.willMosaicImage.onNext(image)
             ingredientsHeader.mosaicImage.image = image
         }
         
@@ -148,21 +148,12 @@ extension MakeMosaicViewController: UITableViewDelegate,
     
     
     @objc func tapNewMosaicImage(_ sender: Any) {
-        progressStart(onView: view)
-        
-        let pickViewController = UIImagePickerController()
-        pickViewController.sourceType = .camera
-        pickViewController.allowsEditing = false
-        pickViewController.cameraDevice = .rear
-        pickViewController.cameraCaptureMode = .photo
-        pickViewController.delegate = self
-        
-        present(pickViewController, animated: false) { [weak self] in
-            self?.progressStop()
-        }
+        actionSheetAlert(self)
     }
     
     @objc func tapConfirmButton(_ sender: Any){
-        print("cute")
+        progressStart(onView: self.view)
+        self.viewModel.input.makeMosaicImage.onNext(true)
+        self.viewModel.input.willMosaicImage.onNext(ingredientsHeader.mosaicImage.image!)
     }
 }

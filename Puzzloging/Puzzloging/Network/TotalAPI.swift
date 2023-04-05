@@ -28,11 +28,11 @@ extension TotalAPI: TargetType {
         case .imageUpload(_,_):
             return APIConstants.imageUpload
         case .getPhoto:
-            return APIConstants.getPhoto + "\\\(User.myId)"
+            return APIConstants.getPhoto + User.myId
         case .generateMosaic(_,_):
             return APIConstants.generateMosaic
         case .getMosaicImage:
-            return APIConstants.getMosaic + "\\\(User.myId)"
+            return APIConstants.getMosaic + User.myId
         }
     }
     
@@ -112,6 +112,7 @@ extension TotalAPI: TargetType {
                 )
         }
     }
+    //var parameter:
     
     var task: Moya.Task {
         switch self {
@@ -122,40 +123,49 @@ extension TotalAPI: TargetType {
             guard let encodingData = try? JSONEncoder().encode(param) else { return .requestPlain}
             return .requestData(encodingData)
             
-        case .imageUpload(let color, let image):
-            let imageData = image.jpegData(compressionQuality: 1)
+        case .imageUpload(let color, let images):
+
+            let image = images.jpegData(compressionQuality: 1)!
             struct temp: Codable {
                 let memberId: String
                 let color: String
             }
             let param = temp(memberId: User.myId, color: color.rawValue)
-            guard let request = try? JSONSerialization.data(withJSONObject: param) else { return .requestPlain}
-            var formData: [Moya.MultipartFormData] = [Moya.MultipartFormData(provider: .data(imageData!), name: "image")]
-            formData.append(Moya.MultipartFormData(provider: .data(request), name: "request"))
-          
+            guard let request = try? JSONEncoder().encode(param) else { return .requestPlain }
+            var formData: [Moya.MultipartFormData] = [Moya.MultipartFormData(provider: .data(request), name: "request", mimeType: "application/json")]
+            formData.append(Moya.MultipartFormData(provider: .data(image), name: "image", fileName: "image.jpeg", mimeType: "image/jpeg"))
+            
             return .uploadMultipart(formData)
             
         case .getPhoto:
             return .requestPlain
+            
         case .generateMosaic(let colors, let image):
             let imageData = image.jpegData(compressionQuality: 1)
             struct temp: Codable {
                 let memberId: String
-                let color: [String]
+                let colors: [String]
             }
-            let param = temp(memberId: User.myId, color: colors.map{ $0.rawValue })
-            guard let request = try? JSONSerialization.data(withJSONObject: param) else { return .requestPlain}
-            var formData: [Moya.MultipartFormData] = [Moya.MultipartFormData(provider: .data(imageData!), name: "image")]
-            formData.append(Moya.MultipartFormData(provider: .data(request), name: "request"))
-          
+            let param = temp(memberId: User.myId, colors: colors.map{ $0.rawValue })
+            guard let request = try? JSONEncoder().encode(param) else { return .requestPlain }
+            print(String(data: request, encoding: .utf8))
+            var formData: [Moya.MultipartFormData] = [Moya.MultipartFormData(provider: .data(request), name: "request", mimeType: "application/json")]
+            formData.append(MultipartFormData(provider: .data(imageData!), name: "image", fileName: "image.jpeg", mimeType: "image/jpeg"))
             return .uploadMultipart(formData)
+            
         case .getMosaicImage:
             return .requestPlain
         }
     }
     
     var headers: [String : String]? {
-        return ["Content-Type" : "application/json"]
+        switch self {
+        case .imageUpload(_, _), .generateMosaic(_, _):
+            return ["Content-Type" : "multipart/form-data"]
+        default:
+            return ["Content-Type" : "application/json"]
+        }
+       
     }
     
     static func returnType(of type: TotalAPI) -> Codable.Type {
@@ -166,10 +176,10 @@ extension TotalAPI: TargetType {
             return CommonRes<Image>.self
         case .getPhoto:
             return CommonResWithArray<Image>.self
-        case .generateMosaic(_):
-            return CommonRes<Image>.self
+        case .generateMosaic(_,_):
+            return CommonRes<MosaicImage>.self
         case .getMosaicImage:
-            return CommonRes<Image>.self
+            return CommonResWithArray<MosaicImage>.self
         }
     }
 }

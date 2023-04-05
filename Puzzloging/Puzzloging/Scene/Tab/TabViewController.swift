@@ -33,6 +33,12 @@ class TabViewController: UITabBarController {
         makeMosaicViewController.tabBarItem.image = UIImage(systemName: "mosaic")
         makeMosaicViewController.tabBarItem.selectedImage = UIImage(systemName: "mosaic.fill")
         
-        setViewControllers([mainViewController,makeMosaicViewController], animated: true)
+        let mosaicedImageCollectionViewController = MosaicedImageCollectionViewController(viewmodel: viewmodel)
+        mosaicedImageCollectionViewController.title = "MosaicPhotos"
+        mosaicedImageCollectionViewController.navigationItem.largeTitleDisplayMode = .always
+        mosaicedImageCollectionViewController.tabBarItem.image = UIImage(systemName: "c.circle")
+        mosaicedImageCollectionViewController.tabBarItem.selectedImage = UIImage(systemName: "c.circle.fill")
+        
+        setViewControllers([mainViewController,makeMosaicViewController,mosaicedImageCollectionViewController], animated: true)
     }
 }

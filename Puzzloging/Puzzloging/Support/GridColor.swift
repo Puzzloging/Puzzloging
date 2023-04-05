@@ -11,7 +11,6 @@ import RxSwift
 enum GridColor: String, CaseIterable {
     
     case add = "New Picture"
-    case mosaic = "Mosaic Picture"
     case black = "black"
     case red = "red"
     case white = "white"
@@ -32,8 +31,6 @@ enum GridColor: String, CaseIterable {
         
         switch self {
         case .add :
-            return .lightGray
-        case .mosaic:
             return .lightGray
         case .black:
             return UIColor(red: 0 / 255, green: 0 / 255, blue: 0 / 255, alpha: 1)
@@ -71,8 +68,6 @@ enum GridColor: String, CaseIterable {
     var koreaColorName: String {
         switch self {
         case .add:
-            return "없음"
-        case .mosaic:
             return "없음"
         case .black:
             return "검정색"
@@ -200,8 +195,7 @@ enum GridColor: String, CaseIterable {
                 
             }
             mostSimilarityColor = mostSimilarityColor == .add ? .gray : mostSimilarityColor
-            mostSimilarityColor = mostSimilarityColor == .mosaic ? .gray : mostSimilarityColor
-            
+          
             gridColors.append(mostSimilarityColor)
         }
         return Observable.just(gridColors.uniqued())

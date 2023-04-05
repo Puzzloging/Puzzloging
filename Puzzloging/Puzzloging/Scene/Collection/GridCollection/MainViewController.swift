@@ -91,18 +91,8 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            progressStart(onView: view)
-
-            let pickViewController = UIImagePickerController()
-            pickViewController.sourceType = .camera
-            pickViewController.allowsEditing = false
-            pickViewController.cameraDevice = .rear
-            pickViewController.cameraCaptureMode = .photo
-            pickViewController.delegate = self
-
-            present(pickViewController, animated: false) { [weak self] in
-                self?.progressStop()
-            }
+           
+            actionSheetAlert(self)
         }
         else {
             guard let cell = collectionView.cellForItem(at: indexPath) as? MainViewCollectionViewCell else { return }
@@ -114,6 +104,8 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            print("---------------")
+            print(image)
             viewModel.input.addImage.onNext(image)
         }
         

@@ -37,6 +37,8 @@
 		D43B557E2973F6E100CCB8E9 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B557D2973F6E100CCB8E9 /* Entities.swift */; };
 		D43B55802973F98700CCB8E9 /* TotalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B557F2973F98700CCB8E9 /* TotalAPI.swift */; };
 		D43B55822974083F00CCB8E9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B55812974083F00CCB8E9 /* Network.swift */; };
+		D43B55842975F6AF00CCB8E9 /* MosaicedImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43B55832975F6AF00CCB8E9 /* MosaicedImageCollectionViewController.swift */; };
+		D45F74FD29C3518A0055BB81 /* MultiProgressView in Frameworks */ = {isa = PBXBuildFile; productRef = D45F74FC29C3518A0055BB81 /* MultiProgressView */; };
 		D4CE8A60296C21B200A5956F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE8A5F296C21B200A5956F /* AppDelegate.swift */; };
 		D4CE8A62296C21B200A5956F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE8A61296C21B200A5956F /* SceneDelegate.swift */; };
 		D4CE8A64296C21B200A5956F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CE8A63296C21B200A5956F /* LoginViewController.swift */; };
@@ -67,6 +69,7 @@
 		D43B557D2973F6E100CCB8E9 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		D43B557F2973F98700CCB8E9 /* TotalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAPI.swift; sourceTree = "<group>"; };
 		D43B55812974083F00CCB8E9 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		D43B55832975F6AF00CCB8E9 /* MosaicedImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicedImageCollectionViewController.swift; sourceTree = "<group>"; };
 		D4CE8A5C296C21B200A5956F /* Puzzloging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puzzloging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4CE8A5F296C21B200A5956F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4CE8A61296C21B200A5956F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45F74FD29C3518A0055BB81 /* MultiProgressView in Frameworks */,
 				D43B553B296C282900CCB8E9 /* UIImageColors in Frameworks */,
 				D43B5538296C280500CCB8E9 /* Then in Frameworks */,
 				D43B553E296C290C00CCB8E9 /* Kingfisher in Frameworks */,
@@ -177,6 +181,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		D43B55872975FE8500CCB8E9 /* MosaicedIMageCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D43B55832975F6AF00CCB8E9 /* MosaicedImageCollectionViewController.swift */,
+			);
+			path = MosaicedIMageCollectionViewController;
+			sourceTree = "<group>";
+		};
 		D4CE8A53296C21B200A5956F = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +240,7 @@
 				D43B555E296D669500CCB8E9 /* Collection */,
 				D43B555D296D668E00CCB8E9 /* Tab */,
 				D43B556C2971584000CCB8E9 /* MakeMosaicViewController */,
+				D43B55872975FE8500CCB8E9 /* MosaicedIMageCollectionViewController */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -267,6 +280,7 @@
 				D43B553A296C282900CCB8E9 /* UIImageColors */,
 				D43B553D296C290C00CCB8E9 /* Kingfisher */,
 				D43B554D296D253400CCB8E9 /* RxCocoa */,
+				D45F74FC29C3518A0055BB81 /* MultiProgressView */,
 			);
 			productName = Puzzloging;
 			productReference = D4CE8A5C296C21B200A5956F /* Puzzloging.app */;
@@ -304,6 +318,7 @@
 				D43B5539296C282900CCB8E9 /* XCRemoteSwiftPackageReference "UIImageColors" */,
 				D43B553C296C290C00CCB8E9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				D43B554C296D253400CCB8E9 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				D45F74FB29C3518A0055BB81 /* XCRemoteSwiftPackageReference "MultiProgressView" */,
 			);
 			productRefGroup = D4CE8A5D296C21B200A5956F /* Products */;
 			projectDirPath = "";
@@ -338,6 +353,7 @@
 				D43B5560296D680500CCB8E9 /* GridColor.swift in Sources */,
 				D43B5562296FFC9100CCB8E9 /* MainViewCollectionViewCell.swift in Sources */,
 				D43B5550296D37AD00CCB8E9 /* UIViewController+Rxswift.swift in Sources */,
+				D43B55842975F6AF00CCB8E9 /* MosaicedImageCollectionViewController.swift in Sources */,
 				D43B5547296C2C8B00CCB8E9 /* UIColor+Constant.swift in Sources */,
 				D43B55792972C38C00CCB8E9 /* MakeMosaicTableFooterView.swift in Sources */,
 				D43B556B2971566B00CCB8E9 /* MakeMosaicViewController.swift in Sources */,
@@ -494,9 +510,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VT6KC94KM7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Puzzloging/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라를 허용하시겠습니까?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -506,7 +523,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = pccommen.Puzzloging;
+				PRODUCT_BUNDLE_IDENTIFIER = "pccommen.Puzzloging--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -521,9 +538,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VT6KC94KM7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Puzzloging/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라를 허용하시겠습니까?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -533,7 +551,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = pccommen.Puzzloging;
+				PRODUCT_BUNDLE_IDENTIFIER = "pccommen.Puzzloging--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -621,6 +639,14 @@
 				kind = branch;
 			};
 		};
+		D45F74FB29C3518A0055BB81 /* XCRemoteSwiftPackageReference "MultiProgressView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-gallagher/MultiProgressView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -663,6 +689,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D43B554C296D253400CCB8E9 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
+		};
+		D45F74FC29C3518A0055BB81 /* MultiProgressView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D45F74FB29C3518A0055BB81 /* XCRemoteSwiftPackageReference "MultiProgressView" */;
+			productName = MultiProgressView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

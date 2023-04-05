@@ -8,12 +8,12 @@
 import Foundation
 
 struct APIConstants {
-    static let endpoint = "13.209.197.209"
+    static let endpoint = "http://13.209.197.209:8080"
     static let login = "/login"
     static let imageUpload = "/upload"
-    static let getPhoto = "/trash"
+    static let getPhoto = "/trash/"
     static let generateMosaic = "/photo-mosaic"
-    static let getMosaic = "photo-mosaic"
+    static let getMosaic = "/photo-mosaic/"
 }
 
 struct User {
